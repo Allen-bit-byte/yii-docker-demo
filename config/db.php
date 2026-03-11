@@ -2,7 +2,7 @@
 
 return [
  'class' => 'yii\db\Connection',
- 'dsn' => 'mysql:host=localhost;dbname=silk_v2',
+ 'dsn' => 'mysql:host=host.docker.internal;dbname=silk_v2',
  'username' => 'root',
  'password' => '',
  'charset' => 'utf8',
