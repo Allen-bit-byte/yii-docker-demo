@@ -11,14 +11,14 @@ pipeline {
 
         stage('Build Containers') {
             steps {
-                sh 'docker compose down'
-                sh 'docker compose up -d --build'
+                bat 'docker compose down'
+                bat 'docker compose up -d --build'
             }
         }
 
         stage('Check Running Containers') {
             steps {
-                sh 'docker ps'
+                bat 'docker ps'
             }
         }
 
