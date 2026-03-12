@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/yii-project.git'
+                git 'https://github.com/Allen-bit-byte/yii-docker-demo.git'
             }
         }
 
