@@ -3,9 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
+        stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Allen-bit-byte/yii-docker-demo.git'
+                checkout scm
             }
         }
 
