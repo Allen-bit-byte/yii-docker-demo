@@ -2,11 +2,11 @@ services:
   web:
     build: .
     ports:
-      - "8081:80"
+      - "8080:80"
     volumes:
       - .:/var/www/html
-      - /var/www/html/vendor
-      - /var/www/html/runtime
+      - vendor_data:/var/www/html/vendor
+      - runtime_data:/var/www/html/runtime
     depends_on:
       - db
 
@@ -18,10 +18,12 @@ services:
       MYSQL_USER: silkuser
       MYSQL_PASSWORD: silkpass
     ports:
-      - "3307:3306"
+      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
       - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
 
 volumes:
   db_data:
+  vendor_data:
+  runtime_data:
