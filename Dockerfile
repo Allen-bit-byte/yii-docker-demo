@@ -11,6 +11,8 @@ RUN docker-php-ext-install pdo pdo_mysql
 # Enable Apache rewrite
 RUN a2enmod rewrite
 
+RUN git config --global --add safe.directory /var/www/html
+
 # Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
